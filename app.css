@@ -1,0 +1,236 @@
+body {
+	background: url(https://wallpaperscraft.com/image/city_night_top_view_skyscrapers_metropolis_28476_1366x768.jpg);
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+
+	font-family: Lato;
+	color: white;
+}
+
+body a {
+	color: #fff;
+	-webkit-transition: all .5s;
+  	-moz-transition: all .5s;
+  	-ms-transition: all .5s;
+  	-o-transition: all .5s;
+  	transition: all .5s;
+}
+
+body a:hover {
+	color:rgba(255,255,255,0.5);
+	text-decoration:none;
+}
+
+html {
+	height: 100%;
+}
+
+h1 {
+	/* Bolds and makes the text bigger */
+	font-weight: 700;
+	font-size: 5em;
+}
+
+hr {
+	/* Makes it so HR does not take up the entire screen */
+	width: 400px;
+
+	/* Gives the HR a shadow */
+	border-top: 1px solid #f8f8f8;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.section {
+	position: relative;
+    display: table;
+    width: 100%;
+    height: 100%;
+    height: 100vh;
+}
+
+.navbar-default {
+	background:none;
+  border: none;
+}
+
+.navbar-default .navbar-nav > li > a, .navbar-default .navbar-nav > li > a {
+	color:rgba(255,255,255,0.75);
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+	color: #fff;
+}
+
+.navbar-brand {
+	font-weight:bold;
+	font-size:2.5em!important;
+	margin-top:5px;
+	color:rgba(255,255,255,0.85)!important;
+	text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4),
+				 0px 8px 13px rgba(0, 0, 0, 0.1),
+				 0px 18px 23px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand:hover {
+	transform: translate(3px, 0px);
+
+}
+
+.hidden {
+	display: none;
+}
+
+.home {
+    display: inline;  
+    margin: 10px;
+}
+
+.home button {
+		background-color: rgba(255,255,255,0.6);
+		border:0;
+		-webkit-transition: all .5s;
+  	    -moz-transition: all .5s;
+  	    -ms-transition: all .5s;
+  	    -o-transition: all .5s;
+  	    transition: all .5s;
+}
+
+#content {
+	/* Keeps the image in the center */
+	text-align: center;
+	padding-top: 10%;
+
+	/* Google how shadows work */
+	text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4),
+				 0px 8px 13px rgba(0, 0, 0, 0.1),
+				 0px 18px 23px rgba(0, 0, 0, 0.1);
+
+}
+
+#rideshome div {
+	text-align:center;
+}
+
+#hello {
+	padding-top: 10%;
+	text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4),
+				 0px 8px 13px rgba(0, 0, 0, 0.1),
+				 0px 18px 23px rgba(0, 0, 0, 0.1);
+}
+
+#choose {
+	padding-top: 5%;
+	width:70%;
+	margin:auto;
+}
+
+#choose span {
+	font-size:2em;
+	margin: 15px;
+	text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4),
+				 0px 8px 13px rgba(0, 0, 0, 0.1),
+				 0px 18px 23px rgba(0, 0, 0, 0.1);
+}
+
+#choose img {
+	-webkit-transition: all .5s;
+  	-moz-transition: all .5s;
+  	-ms-transition: all .5s;
+  	-o-transition: all .5s;
+  	transition: all .5s;
+}
+
+#choose img:hover {
+	transform: translate(0, -2px);
+	opacity:0.4;
+}
+
+#ridelist {
+  right: 0;
+  left: 0;
+  bottom:0;
+  	background-color: rgba(0,0,0,0.2);
+
+}
+
+#list {
+	position:absolute
+	overflow:scroll;
+}
+
+#list div:first-child {
+	font-size:3em;
+	text-align:center;
+	padding:10px;
+	text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4),
+				 0px 8px 13px rgba(0, 0, 0, 0.1),
+				 0px 18px 23px rgba(0, 0, 0, 0.1);
+}
+
+#buttons a{
+	border: none;
+	background-color: rgba(255,255,255,0.6);
+    margin-left: 10px;
+    margin-right: 10px;
+    -webkit-transition: all .5s;
+  	-moz-transition: all .5s;
+  	-ms-transition: all .5s;
+  	-o-transition: all .5s;
+  	transition: all .5s;
+}
+
+#buttons a:hover{
+	background-color: rgba(255,255,255,0.8);
+}
+
+.authform {
+	width: 390px;
+	margin: auto;
+}
+
+#split-form input {
+	margin-left:1.8px;
+	margin-right:1.8px;
+	width: 190px;
+	display: inline;
+}
+
+.form-control {
+	margin: auto;
+	margin-bottom: 10px;
+	background-color: rgba(255,255,255,0.8);
+}
+
+.form-control:focus {
+	background-color: #fff;
+}
+
+.form-group a {
+	margin: auto;
+	margin-right: 0;
+}
+
+.entryform {
+	width:40%;
+	margin:auto;
+}
+
+#results {
+	padding-top:4%;
+}
+
+#results span {
+	font-size:2em;
+}
+
+#indent {
+	margin-left:20px;
+	font-size:1.5em;
+}
+
+.algolia-places {
+	color: #000!important;
+	text-shadow:none;
+}
+
