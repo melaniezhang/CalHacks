@@ -1,0 +1,75 @@
+<% include partials/header %>
+<!-- nav -->
+	<nav class="navbar navbar-default">
+	  <div class="container">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" href="/">Ridesharing</a>
+	    </div>
+
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+	      <ul class="nav navbar-nav navbar-right">
+	        <li><a href="/logout">Log Out <i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
+	      </ul>
+	      <ul class="nav navbar-nav navbar-right">
+	        <li><a href="/profile">Profile <i class="fa fa-user" aria-hidden="true"></i></a></li>
+	      </ul>
+	    </div>
+	  </div>
+	 </nav>
+
+<div class="container hidden">
+	<div class="row" style="width:65%;margin:auto;">
+			<div id="content">
+				<h1><%= ride.origin %> to <%= ride.destination %></h1>
+				<br>
+
+				<div class="col-sm-6" style="font-size:1.2em;width:35%;margin:0 0 0 15%;text-align:left;">
+					Driver Name: <%=ride.driver.first%> <%= ride.driver.last %><br>
+					Phone Number: <%= ride.driver.phone %><br>
+					Origin: <%= ride.origin %><br>
+					Destination: <%= ride.destination %><br>
+					Price: <%= ride.price %><br>
+					Date: <%= ride.date %><br>
+					Passengers:
+						<% ride.passengers.forEach(function(passenger){ %>
+							<%= passenger.first %> <%= passenger.last %> <br>
+						<% }); %>
+				</div>
+				<div class="col-sm-6" style="margin-top:12%;">
+				<form action="/confirm" method="GET">
+					<button class="btn btn-primary btn-large" id="passenger" style="font-size:1.2em;">Sign up as passenger</button>	
+				</form>
+				</div>
+			</div>
+		</div>
+</div>
+<script>
+$(document).ready(function(){
+    $('.container').fadeIn(800).removeClass('hidden');
+});
+</script>
+
+
+<script type="text/javascript">
+	var url = window.location.href;
+	var id = url.split("/")[4];
+
+	$('#passenger').click(function(){
+		$.ajax({
+		  	url: "/rides/addpassenger",
+		  	type: "POST",
+		  	data: {id: id}
+		});
+	});
+</script>
+
+<% include partials/footer %>

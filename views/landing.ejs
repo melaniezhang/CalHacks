@@ -1,0 +1,61 @@
+<% include partials/header %>
+<link rel="stylesheet" type="text/css" href="app.css">
+	<div class="container" style="padding-top:7%">
+		<div class="row">
+			<div class="col-lg-12">
+				<div id="content">
+					<h1><span id="first" class="hidden">Ridesharing</span></h1>
+					<h3><span id="second" class="hidden">Catch a ride anytime, anywhere!
+					</span></h3>
+					<hr class="hidden">
+					<div id="buttons" class="hidden">
+					<form action="/register" method="GET" class="home">
+						<button class="btn btn-default btn-lg" id="register">Sign Up</button>
+					</form>					
+					<form action="/login" method="GET" class="home">
+						<button class="btn btn-default btn-lg" id="login">Log In</button>
+					</form>
+
+					</div>
+<!-- 					<a class="btn btn-primary btn-large" href="rides"> Click to view all rides</a> -->
+				</div>
+			</div>
+		</div>
+	</div>
+
+<script>
+$(document).ready(function(){
+
+    $('#first').fadeIn(800).removeClass('hidden');
+    $('#second').fadeIn(1200).removeClass('hidden');
+    $('hr').fadeIn(1200).removeClass('hidden');
+    $('#buttons').fadeIn(1500).removeClass('hidden');
+
+
+  // Hide div 2 by default
+
+  $('#register').click(function(){ 
+      $('#buttons').fadeOut( "slow", function() {
+          $('#form').fadeIn().removeClass('hidden');
+  		});
+  });
+
+  $('#login').click(function(){ 
+      $('#buttons').fadeOut( "slow", function() {
+          $('#form').fadeIn().removeClass('hidden');
+  		});
+  });
+});
+
+$('#exampleInputPassword').keypress(function (e) {
+  if (e.which == 13) {
+  	$('#content').fadeOut("slow", function() {
+  	$('form#login').submit();
+    window.location = "untitled.html";
+  	});
+       return false; //<---- Add this line
+  }
+});
+</script>
+
+<% include partials/footer %>

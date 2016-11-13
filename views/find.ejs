@@ -1,0 +1,294 @@
+<% include partials/header %>
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+	<title>Ridesharing</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">	
+	<script src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script src="https://use.fontawesome.com/41e6a86952.js"></script><script src="https://cdn.jsdelivr.net/places.js/1/places.min.js"></script>
+
+
+<style>
+body {
+	background: url(https://wallpaperscraft.com/image/city_night_top_view_skyscrapers_metropolis_28476_1366x768.jpg);
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+
+	font-family: Lato;
+	color: white;
+}
+
+body a {
+	color: #fff;
+	-webkit-transition: all .5s;
+  	-moz-transition: all .5s;
+  	-ms-transition: all .5s;
+  	-o-transition: all .5s;
+  	transition: all .5s;
+}
+
+body a:hover {
+	color:rgba(255,255,255,0.5);
+	text-decoration:none;
+}
+
+
+/* This is to fix the image. It makes it so that the HTML
+    height matches the body height*/
+html {
+	height: 100%;
+}
+
+.section {
+	position: relative;
+    display: table;
+    width: 100%;
+    height: 100%;
+    height: 100vh;
+}
+
+.navbar-default {
+	background:none;
+  border: none;
+}
+
+.navbar-default .navbar-nav > li > a, .navbar-default .navbar-nav > li > a {
+	color:rgba(255,255,255,0.75);
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+	color: #fff;
+}
+
+.navbar-brand {
+	font-weight:bold;
+	font-size:2.5em!important;
+	margin-top:5px;
+	color:rgba(255,255,255,0.85)!important;
+	text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4),
+				 0px 8px 13px rgba(0, 0, 0, 0.1),
+				 0px 18px 23px rgba(0, 0, 0, 0.1);
+}
+
+.hidden {
+	display: none;
+}
+
+.home {
+    display: inline;  
+    margin: 10px;
+}
+
+.home button {
+		background-color: rgba(255,255,255,0.6);
+		border:0;
+		-webkit-transition: all .5s;
+  	    -moz-transition: all .5s;
+  	    -ms-transition: all .5s;
+  	    -o-transition: all .5s;
+  	    transition: all .5s;
+}
+
+#content {
+	/* Keeps the image in the center */
+	text-align: center;
+	padding-top: 10%;
+
+	/* Google how shadows work */
+	text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4),
+				 0px 8px 13px rgba(0, 0, 0, 0.1),
+				 0px 18px 23px rgba(0, 0, 0, 0.1);
+
+}
+
+#rideshome div {
+	text-align:center;
+}
+
+#hello {
+	padding-top: 10%;
+	text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4),
+				 0px 8px 13px rgba(0, 0, 0, 0.1),
+				 0px 18px 23px rgba(0, 0, 0, 0.1);
+}
+
+#choose {
+	padding-top: 5%;
+	width:70%;
+	margin:auto;
+}
+
+#choose span {
+	font-size:2em;
+	margin: 15px;
+	text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4),
+				 0px 8px 13px rgba(0, 0, 0, 0.1),
+				 0px 18px 23px rgba(0, 0, 0, 0.1);
+}
+
+#ridelist {
+  right: 0;
+  left: 0;
+  bottom:0;
+  	background-color: rgba(0,0,0,0.2);
+
+}
+
+#list {
+	position:absolute
+	overflow:scroll;
+}
+
+#list div:first-child {
+	font-size:3em;
+	text-align:center;
+	padding:10px;
+	text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4),
+				 0px 8px 13px rgba(0, 0, 0, 0.1),
+				 0px 18px 23px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+	/* Bolds and makes the text bigger */
+	font-weight: 700;
+	font-size: 5em;
+}
+
+hr {
+	/* Makes it so HR does not take up the entire screen */
+	width: 400px;
+
+	/* Gives the HR a shadow */
+	border-top: 1px solid #f8f8f8;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+#buttons a{
+	border: none;
+	background-color: rgba(255,255,255,0.6);
+    margin-left: 10px;
+    margin-right: 10px;
+    -webkit-transition: all .5s;
+  	-moz-transition: all .5s;
+  	-ms-transition: all .5s;
+  	-o-transition: all .5s;
+  	transition: all .5s;
+}
+
+#buttons a:hover{
+	background-color: rgba(255,255,255,0.8);
+}
+
+.authform {
+	width: 390px;
+	margin: auto;
+}
+
+#split-form input {
+	margin-left:1.8px;
+	margin-right:1.8px;
+	width: 190px;
+	display: inline;
+}
+
+.form-control {
+	margin: auto;
+	margin-bottom: 10px;
+	background-color: rgba(255,255,255,0.8);
+}
+
+.form-control:focus {
+	background-color: #fff;
+}
+
+.form-group a {
+	margin: auto;
+	margin-right: 0;
+}
+
+.entryform {
+	width:40%;
+	margin:auto;
+}
+
+#wheel {
+	background: url('img/wheel.png');
+}
+
+#car {
+	background: url('img/car.png');
+}
+
+#mag {
+	background: url('img/wheel.png');
+}
+</style> -->
+<!-- nav -->
+	<nav class="navbar navbar-default">
+	  <div class="container">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" href="/">Ridesharing</a>
+	    </div>
+
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+	      <ul class="nav navbar-nav navbar-right">
+	        <li><a href="/logout">Log Out <i class="fa fa-sign-out" aria-hidden="true"></i></a></li>
+	      </ul>
+	      <ul class="nav navbar-nav navbar-right">
+	        <li><a href="/profile">Profile <i class="fa fa-user" aria-hidden="true"></i></a></li>
+	      </ul>
+	    </div>
+	  </div>
+	 </nav>
+
+<!-- method = POST sends a post request to /rides -->
+<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div id="content" class="hidden">
+						<h1>Find a Ride</h1><br>
+					<form action="/rides/find" method="POST" class="entryform">
+		 				<input type="search" class="form-control" id="address-input" placeholder="origin" name="origin">
+		 				<input type="search" class="form-control" id="address-inputs" placeholder="destination" name="destination">
+
+		 				<script>
+		 					var placesAutocomplete = places({
+		  						container: document.querySelector('#address-input')
+							});
+		 				</script>
+
+		 				<script>
+		 					var placesAutocomplete = places({
+		   						container: document.querySelector('#address-inputs')
+							});
+		 				</script>
+						<input type="date" class="form-control" placeholder="date" name="date">
+						<br>
+
+						<a class="btn btn-primary btn" href="/rides">Back to rides</a>
+						<input class="btn btn-primary" type="submit" value="Submit" style="margin-left:20px">
+					</form>
+				</div>
+			</div>
+		</div>
+</div>
+
+<script>
+$(document).ready(function(){
+    $('#content').fadeIn(800).removeClass('hidden');
+});
+</script>
+<% include partials/footer %>
